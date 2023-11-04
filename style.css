@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    135deg,
+    rgb(190, 173, 250),
+    rgb(255, 248, 201)
+  );
+}
+.app {
+  width: 550px;
+  min-height: max-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 10px;
+}
+.Menu {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: whitesmoke;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.Menu > image {
+  height: 30px;
+  width: 20px;
+}
+
+.insertTask {
+  height: 35px;
+  width: 500px;
+  margin: 30px 30px;
+  display: flex;
+  border-radius: 15px;
+  justify-content: center;
+  position: relative;
+}
+
+#inputText {
+  flex: 1;
+  height: 100%;
+  border-radius: 15px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 248, 201);
+}
+.input button {
+  height: 100%;
+  width: 70px;
+  border-radius: 15px;
+  background-color: yellowgreen;
+  color: white;
+  border: none;
+  position: absolute;
+  right: 0px;
+}
+
+.tasks li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 0 0 65px;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+  
+}
+
+.input p {
+  color: rgb(218, 12, 129);
+  padding: 0px 10px;
+  font-size: 10px; 
+  position: absolute;
+  top: 35px;
+  left: 5px;
+}
+
+.tasks li::before {
+  content: '';
+  height: 20px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-image: url(./images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  padding-right: 10px;
+  top: 10px;
+  left: 35px;
+}
+
+.tasks li.checked {
+  text-decoration: line-through;
+}
+.tasks li.checked::before {
+  background-image: url(./images/correct.png);
+}
+
+.tasks li span {
+  font-size: 18px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(223, 204, 251);
+  position: absolute;
+  right: 15px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.tasks li span:hover {
+  background-color: red;
+  font-weight: bold;
+}
