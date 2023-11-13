@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .container {
@@ -9,11 +10,7 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    135deg,
-    rgb(190, 173, 250),
-    rgb(255, 248, 201)
-  );
+  background-color: rgb(18, 14, 30);
 }
 .app {
   width: 550px;
@@ -24,6 +21,9 @@
   background-color: white;
   box-shadow: 1px 1px 2px gray;
   border-radius: 10px;
+  background-image: linear-gradient(135deg, #7d5a50, #fcdec0);
+  color: white;
+  box-shadow: #fff 0px 3px 2px;
 }
 .Menu {
   width: 100%;
@@ -34,7 +34,7 @@
   background-color: whitesmoke;
   border-radius: 10px 10px 0 0;
   font-family: 'Poppins', sans-serif;
-
+  color: #000;
 }
 
 .Menu > image {
@@ -59,7 +59,7 @@
   padding-left: 20px;
   border: none;
   outline: none;
-  background-color: rgb(255, 248, 201);
+  background-color: #fff;
 }
 .input button {
   height: 100%;
@@ -67,6 +67,7 @@
   border-radius: 15px;
   background-color: yellowgreen;
   color: white;
+  font-weight: 600;
   border: none;
   position: absolute;
   right: 0px;
@@ -75,20 +76,20 @@
 .tasks li {
   list-style: none;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 0 0 65px;
   cursor: pointer;
   position: relative;
   margin-top: 10px;
-  
 }
 
 .input p {
-  color: rgb(218, 12, 129);
+  color: black;
   padding: 0px 10px;
-  font-size: 10px; 
+  font-size: 14px;
+  font-weight: 550;
   position: absolute;
-  top: 35px;
+  top: 40px;
   left: 5px;
 }
 
@@ -96,6 +97,7 @@
   content: '';
   height: 20px;
   width: 10px;
+  border: #fff 2px s;
   border-radius: 50%;
   position: absolute;
   background-image: url(./images/unchecked.png);
@@ -108,6 +110,7 @@
 
 .tasks li.checked {
   text-decoration: line-through;
+  color: green;
 }
 .tasks li.checked::before {
   background-image: url(./images/correct.png);
